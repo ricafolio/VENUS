@@ -2,28 +2,18 @@
 import Menu from "./icon/Menu.astro"
 
 const menuClass = [
-  "block rounded py-2 pl-3 pr-4",
-  "text-white hover:bg-gray-100 transition-colors",
-  "md:hover:bg-transparent md:hover:text-violet-700 md:p-0",
-]
-
-const activeMenuClass = [
-  "block rounded py-2 pl-3 pr-4",
-  "text-white bg-violet-700 transition-colors",
-  "md:bg-transparent md:text-violet-500 md:p-0",
+  "block rounded py-3 px-2",
+  "transition-colors duration-300",
+  "text-gray-500 hover:text-white",
+  "md:p-0",
 ]
 ---
 
-<nav class="border-gray-200">
+<nav class="border-t-2 border-indigo-500">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="/" class="flex items-center">
-      <img
-        src="/logo.svg" 
-        class="h-8 mr-3"
-        alt="JPTR Logo" 
-      />
+    <a href="#">
       <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-        JPTR Planar
+        JUPTR
       </span>
     </a>
 
@@ -31,13 +21,14 @@ const activeMenuClass = [
       <button 
         type="button"
         class:list={[
-          "text-sm font-medium rounded-lg text-center",
-          "text-white bg-violet-700 hover:bg-violet-800",
-          "focus:ring-4 focus:outline-none focus:ring-violet-300",
-          "px-4 py-2 mr-3 md:mr-0",
+          "text-sm font-medium rounded-full text-center",
+          "text-black bg-white hover:bg-gray-100",
+          "focus:ring-4 focus:outline-none focus:ring-indigo-300",
+          "px-5 py-2 mr-3 md:mr-0",
+          "transition-colors duration-300"
         ]}
       >
-          Get started
+          Pre-order now
       </button>
       <button 
         type="button" 
@@ -65,21 +56,21 @@ const activeMenuClass = [
     >
       <ul class:list={[
         "flex flex-col font-medium",
-        "md:flex-row md:space-x-8",
+        "md:flex-row md:space-x-10",
         "p-4 mt-4",
         "md:p-0 md:mt-0"
       ]}>
         <li>
-          <a href="#" class:list={activeMenuClass} aria-current="page">Home</a>
+          <a href="#" class:list={menuClass} aria-current="page">Home</a>
         </li>
         <li>
-          <a href="#" class:list={menuClass}>About</a>
+          <a href="#" class:list={menuClass}>Accessories</a>
         </li>
         <li>
-          <a href="#" class:list={menuClass}>Services</a>
+          <a href="#" class:list={menuClass}>Manual</a>
         </li>
         <li>
-          <a href="#" class:list={menuClass}>Contact</a>
+          <a href="#" class:list={menuClass}>Support</a>
         </li>
       </ul>
     </div>
