@@ -14,6 +14,7 @@ const { title, description } = Astro.props
 		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://api.fontshare.com/v2/css?f[]=switzer@800,700,400,300,500&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -22,11 +23,9 @@ const { title, description } = Astro.props
 </html>
 
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-	}
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		font-family: 'Switzer', sans-serif;
+		background-color: #000;
+		color: #fff;
 	}
 </style>
