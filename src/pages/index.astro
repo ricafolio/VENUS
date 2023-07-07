@@ -11,7 +11,9 @@ import Announcement from "../components/Announcement.astro"
 >
 	<main class="min-h-screen">
 		<Announcement />
-		<Navbar />
-		<Hero />
+		<div class="bg-[url(/bg_hero.png)] sm:bg-center bg-cover">
+			<Navbar />
+			<Hero />
+		</div>
 	</main>
 </Layout>
