@@ -18,21 +18,21 @@ const menuClass = [
       </span>
     </a>
 
-    <div class="flex md:order-2">
-      <button 
-        type="button"
+    <div class="flex md:order-2 bg-black">
+      <a
+        href="#"
         class:list={[
           "inline-flex items-center",
           "text-sm font-medium rounded-full text-center",
           "text-black bg-white hover:bg-gray-100",
-          "focus:ring-4 focus:outline-none focus:ring-indigo-300",
+          "focus:outline focus:outline-offset-2 focus:outline-gray-500",
           "pl-5 pr-4 py-2 mr-3 md:mr-0",
           "transition-colors duration-300"
         ]}
       >
           Buy now
           <Icon name="radix-icons:arrow-top-right" class="w-4 h-4 ml-1 inline-block text-gray-500" />
-      </button>
+      </a>
       <button 
         type="button" 
         aria-expanded="false"
