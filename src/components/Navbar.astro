@@ -10,7 +10,7 @@ const menuClass = [
 ]
 ---
 
-<nav>
+<nav id="nav">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="#">
       <span class="font-panchang self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
@@ -79,3 +79,24 @@ const menuClass = [
     </div>
   </div>
 </nav>
+
+<script>
+  let menu = document.getElementById("nav")
+  let offset = menu.offsetHeight
+  window.onscroll = () => {
+    if (window.scrollY > offset - 5) {
+      menu.classList.add("sticky")
+    } else if (window.scrollY < offset - 20) {
+      menu.classList.remove("sticky")
+    }
+  }
+</script>
+
+<style>
+  .sticky {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+  }
+</style>
