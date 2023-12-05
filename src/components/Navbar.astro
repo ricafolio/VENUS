@@ -81,13 +81,14 @@ const menuClass = [
 </nav>
 
 <script>
-  let menu = document.getElementById("nav")
-  let offset = menu.offsetHeight
+  const menu = document.getElementById("nav")
+  const offset = menu ? menu.offsetHeight : 0
+
   window.onscroll = () => {
     if (window.scrollY > offset - 5) {
-      menu.classList.add("sticky")
+      menu?.classList.add("sticky")
     } else if (window.scrollY < offset - 20) {
-      menu.classList.remove("sticky")
+      menu?.classList.remove("sticky")
     }
   }
 </script>
