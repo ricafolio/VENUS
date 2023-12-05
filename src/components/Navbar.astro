@@ -18,7 +18,7 @@ const menuClass = [
       </span>
     </a>
 
-    <div id="navbar-cta" class="flex md:order-2 bg-black">
+    <div id="navbar-cta" class="flex md:order-2">
       <a
         href="#buyNow"
         class:list={[
@@ -87,7 +87,9 @@ const menuClass = [
   window.onscroll = () => {
     if (window.scrollY > offset - 5) {
       menu?.classList.add("sticky")
+      menu?.classList.remove("fadeWhite")
     } else if (window.scrollY < offset - 20) {
+      menu?.classList.add("fadeWhite")
       menu?.classList.remove("sticky")
     }
   }
@@ -104,6 +106,22 @@ const menuClass = [
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
+  }
+
+  @keyframes fadeWhite {
+    from {
+      opacity: 0.5;
+      background-color: #ffffff30;
+    }
+
+    to {
+      opacity: 1;
+      background-color: transparent;
+    }
+  }
+
+  .fadeWhite {
+    animation: fadeWhite 1000ms;
   }
 
   .sticky {
